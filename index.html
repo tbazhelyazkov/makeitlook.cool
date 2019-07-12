@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+<title>Doodle</title>
+<meta description="" content=""/>
+<meta name="viewport" content = "width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+<link href="style.css" media="screen" rel="stylesheet" type="text/css"/>
+</style>
+</head>
+<body>
+<div id="preload" style="display: none;">
+    <img src="images/main-slide1.png"/>
+    <img src="images/main-slide2.png"/>
+    <img src="images/slide4-person1.jpg"/>
+    <img src="images/slide4-person2.jpg"/>
+    <img src="images/slide4-person3.jpg"/>
+    <img src="images/slide4-person4.jpg"/>
+</div>
+
+<div id="container">
+    <div id="intro">
+        <div class="slide active" id="slide1">
+            <h2>Graphic design</h2>
+            <img src="images/main-slide1.png"/>
+        </div>
+        <div class="slide" id="slide2">
+            <h2>Web design</h2>
+            <img src="images/main-slide2.png"/>
+        </div>
+        <div class="slide" id="slide3">
+            <h2>Video</h2>
+            <video width="1200" height="auto" controls="false" loop="true" autoplay>
+                <source src="video/TBI_logo_Opener_3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="slide" id="slide4">
+            <h2>Photography</h2>
+            <div class="persons">
+                <img src="images/slide4-person1.jpg"/>
+                <img src="images/slide4-person2.jpg"/>
+                <img src="images/slide4-person3.jpg"/>
+                <img src="images/slide4-person4.jpg"/>
+            </div>
+        </div>
+        <div id="scrolldown">
+            Scroll down to begin 
+            <span class="mouse"><span></span></span>
+        </div>
+    </div>
+    <ul class="clouds">
+        <li class="clmain"></li>
+        <li class="clright"></li>
+    </ul>
+    <div id="welcome" class="module">
+        <h1>Welcome Angel Zhelyazkov</h1>
+        <div class="supportive">
+            <p>this</p>
+            <img src="images/makeitlookcool-logo-fun.png" alt="MakeItLook.Cool"/>
+        </div>
+        <div class="cta">
+            <a href="#" class="btn btn-primary">Create a new task</a>
+            <p>or</p>
+            <a href="#" class="btn btn-default">go to TeamWork</a>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
