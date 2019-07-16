@@ -44,12 +44,13 @@ body {
 #intro, .container { 
     max-width: 100vw;
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
     padding: 0;
     margin: 0;
     position: relative;
 }
+#intro { overflow: hidden; }
 
 .slide {
     visibility: hidden;
@@ -57,13 +58,12 @@ body {
     position: absolute;
     text-align: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     justify-content: center;
     vertical-align: middle;
     background: #075eec;
@@ -86,7 +86,7 @@ body {
 }
 .slide video {
     max-width: 90%;
-    bottom: 0;
+    bottom: 18%;
     background: url('images/video-overCombined.png') repeat 0 0;
 }
 .slide.rotate { 
@@ -96,6 +96,11 @@ body {
 }
 .slide.active { visibility: visible; z-index: 2; }
 
+#slide0 { 
+    background: url('./images/slide0bgr.jpg') no-repeat 0 0; 
+    background-size: cover;
+}
+#slide0 h2 { color: #441066; }
 #slide2 { background: #6ec32b; }
 #slide2 img { bottom: -15%; }
 #slide3 { background: #dac303; }
@@ -113,15 +118,24 @@ body {
     width: 20%;
     margin: 0 0.5rem;
 }
+#slide5 { 
+    position: relative;
+    z-index: 3;
+    color: initial;
+    background: #fff;
+    padding-bottom:20px;
+}
 
 #slide1.active h2, #slide1.active img { animation: fadeIn 1.25s forwards; }
 #slide2.active h2, #slide3.active h2 { animation: slideInUp 2s forwards; }
 #slide2.active img, #slide3.active video { animation: slideInUp 2.1s forwards; }
 #slide4.active h2 { animation: slideInUp 2s forwards; }
-#slide4.active .persons img:nth-child(1) { animation: slideInLeft 1.5s forwards;}
-#slide4.active .persons img:nth-child(2) { animation: slideInLeft 2s forwards;}
-#slide4.active .persons img:nth-child(3) { animation: slideInLeft 2.5s forwards;}
-#slide4.active .persons img:nth-child(4) { animation: slideInLeft 3s forwards;}
+#slide4.active .persons img:nth-child(1) { animation: slideInLeft 1s forwards;}
+#slide4.active .persons img:nth-child(2) { animation: slideInLeft 1.5s forwards;}
+#slide4.active .persons img:nth-child(3) { animation: slideInLeft 2s forwards;}
+#slide4.active .persons img:nth-child(4) { animation: slideInLeft 2.5s forwards;}
+.slide.goDown { animation: fadeOut 1.5s forwards; }
+#slide5.active { animation: slideInDown 1.75s forwards;}
 
 @keyframes fadeIn {
     from {
@@ -178,30 +192,6 @@ body {
 
 
 /* on scroll*/
-.clouds.is-hidden { 
-    animation: fadeOut 1.25s forwards;
-    transition: opacity 1s ease-in-out;
-    opacity: 0;
-}
-.clouds.is-visible { 
-    opacity: 1;
-    visibility: visible;
-    animation: fadeIn 1.5s forwards;
-    transition: opacity 1s ease-in-out;
-}
-
-.clouds {
-    position: absolute;
-    z-index: 3;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    opacity: 0;
-}
-.clouds li { width: 100%; }
 #scrolldown {
     position: absolute;
     bottom: 0;
